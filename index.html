@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Network Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        section {
+            padding: 30px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            color: #333;
+            font-size: 1.5rem;
+        }
+        p, ul {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            margin: 15px 0;
+        }
+        .diagram {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .diagram img {
+            max-width: 80%;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Neural Network Portfolio</h1>
+    <p>A comprehensive review of neural network components, architecture, and their applications in modern machine learning.</p>
+</header>
+
+<section>
+    <h2>1. Introduction to Neural Networks</h2>
+    <p>Neural networks are a cornerstone of modern machine learning and artificial intelligence. Inspired by biological neural networks in the human brain, neural networks consist of interconnected nodes, or neurons, that process information in layers. These networks are particularly effective for tasks such as classification, regression, image recognition, and natural language processing (NLP).</p>
+    <p>In this portfolio, we will explore the key components of neural networks, understand how data flows through them, and examine the role each component plays in the network's performance. The visual representation provided will help illustrate these concepts, and each section will delve into the theoretical and practical significance of these components.</p>
+</section>
+
+<section>
+    <h2>2. Neural Network Components</h2>
+    <ul>
+        <li><strong>Layers:</strong> Neural networks are organized into layers that transform input data through a series of computational steps. There are typically three types of layers:
+            <ul>
+                <li><strong>Input Layer:</strong> This is the first layer where data is fed into the network. Each neuron in the input layer represents a feature of the dataset.</li>
+                <li><strong>Hidden Layers:</strong> These intermediate layers perform the complex transformations and feature extractions from the input data. A deeper network with more hidden layers can model more complex patterns but may require more computational resources and time.</li>
+                <li><strong>Output Layer:</strong> The final layer produces the predicted results. In a classification problem, this layer will output class probabilities, while in a regression problem, it outputs a continuous value.</li>
+            </ul>
+        </li>
+        <li><strong>Neurons:</strong> Neurons are the fundamental units in a neural network that process information. Each neuron performs the following tasks:
+            <ul>
+                <li><strong>Input:</strong> Each neuron receives inputs, which are the outputs of neurons from the previous layer.</li>
+                <li><strong>Weighted Sum:</strong> The neuron computes a weighted sum of the inputs. The weights represent the importance of each input feature.</li>
+                <li><strong>Activation:</strong> The weighted sum is passed through an activation function to determine the output of the neuron, introducing non-linearity into the model.</li>
+            </ul>
+        </li>
+        <li><strong>Weights:</strong> Weights are the parameters of a neural network that scale the input data before passing it to the next layer. They determine the strength of the connection between neurons. During training, these weights are adjusted to minimize the error of the network’s predictions.
+            <ul>
+                <li>The initial weights are typically set randomly, and the network learns the optimal weights through a process called backpropagation.</li>
+                <li>The update rule used in optimization algorithms, like gradient descent, adjusts the weights based on the computed gradients of the loss function with respect to the weights.</li>
+            </ul>
+        </li>
+        <li><strong>Activation Functions:</strong> These functions define how the weighted sum of inputs is transformed into the output of a neuron. Without activation functions, a neural network would be a linear model, limiting its ability to model complex patterns.
+            <ul>
+                <li><strong>Sigmoid:</strong> Outputs values between 0 and 1. Commonly used for binary classification.</li>
+                <li><strong>ReLU (Rectified Linear Unit):</strong> Outputs the input directly if positive, otherwise, it returns zero. ReLU is widely used due to its simplicity and effectiveness in deep networks.</li>
+                <li><strong>Softmax:</strong> Typically used in multi-class classification, it converts raw output into probability values for each class.</li>
+            </ul>
+        </li>
+        <li><strong>Loss Functions:</strong> The loss function measures how well the neural network's predictions match the actual outcomes. It provides a metric for the optimization algorithm to minimize during training.
+            <ul>
+                <li><strong>Mean Squared Error (MSE):</strong> A common loss function used for regression tasks, which measures the average squared difference between predicted and actual values.</li>
+                <li><strong>Cross-Entropy Loss:</strong> Used for classification problems, this loss function compares the predicted probabilities with the actual class labels.</li>
+            </ul>
+        </li>
+        <li><strong>Optimization Algorithms:</strong> These algorithms adjust the weights in the neural network to minimize the loss function. The most common optimization algorithm is Gradient Descent.
+            <ul>
+                <li><strong>Gradient Descent:</strong> This algorithm computes the gradient (the slope of the loss function) and updates the weights in the opposite direction to reduce the error.</li>
+                <li><strong>Adam:</strong> An advanced version of gradient descent that combines the advantages of both AdaGrad and RMSProp, providing faster convergence and better generalization in many cases.</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section class="diagram">
+    <h2>3. Neural Network Architecture</h2>
+    <p>The diagram below represents a simple feed-forward neural network architecture. Data flows from the input layer, through one or more hidden layers, and finally to the output layer. Each arrow represents the weights connecting the neurons.</p>
+    <img src="neural-network-diagram.png" alt="Neural Network Architecture">
+    <p><em>Note: Upload the neural network diagram to GitHub or host it externally and replace the image link here.</em></p>
+</section>
+
+<section>
+    <h2>4. Component Explanations</h2>
+    <p>Let’s break down the process that occurs at each layer of the network:</p>
+    <ul>
+        <li><strong>Input Layer:</strong> The data fed into the network in the form of numerical values representing features of the dataset. This data is passed to the next layer where computations occur.</li>
+        <li><strong>Hidden Layers:</strong> These layers perform key transformations and feature extraction from the raw input. The number of hidden layers and the number of neurons in each layer directly affect the network's learning capacity.</li>
+        <li><strong>Output Layer:</strong> The final layer produces the network’s predictions. For a binary classification task, the output will be a value between 0 and 1 representing the probability of each class.</li>
+    </ul>
+    <p>The interplay of these layers, weights, activation functions, and optimization algorithms allows the neural network to learn from data and improve its predictions over time.</p>
+</section>
+
+<section>
+    <h2>5. Summary</h2>
+    <p>Understanding the components of a neural network and how they interact is crucial for developing deep learning models. By visualizing the architecture and learning how data flows through the network, we gain insights into how machine learning models make predictions and optimize performance. This exercise has solidified my understanding of neural networks, and I look forward to exploring more advanced topics in machine learning, including deep learning and reinforcement learning.</p>
+    <p>Through this exercise, I have gained valuable insights into the trade-offs between model complexity, performance, and training time. I now have a better understanding of how adjustments in layers, neurons, and activation functions can impact the neural network’s ability to generalize and solve real-world problems.</p>
+</section>
+
+<footer>
+    <p>&copy; 2026 Neural Network Portfolio - Created by [Your Name]</p>
+</footer>
+
+</body>
+</html>
